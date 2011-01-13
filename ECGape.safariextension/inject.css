@@ -1,25 +1,32 @@
-#NavColContainer {
+.WindowFrame {
+    border-top: 3px solid #b02 !important;
+}
+
+#PageContainer #NavColContainer {
     background: white !important;
 }
-#NavColContainer .logo {
+#PageContainer #NavColContainer .logo {
     height: 72px !important;
     margin-left: 63px !important;
 }
-#CloseToolbarItem, #CancelToolbarItem {
+
+#PageContext #Toolbar {
+    width: 66% !important;
+    text-align: right !important;
+/*    border-radius: 16px 6px;
+*/}
+#PageContext #CloseToolbarItem, #CancelToolbarItem {
     float: left !important;
     visibility: hidden;
 }
-#PageContext #Toolbar {
-    width: 33% !important;
-    text-align: right !important;
-}
-#tblTimeEntries tr td:nth-child(1) {
+
+#PageContent #tblTimeEntries tr td:nth-child(1) {
     width: 15% !important;
 }
-#tblTimeEntries tr td:nth-child(2) .AprimoTextBox {
+#PageContent #tblTimeEntries tr td:nth-child(2) .AprimoTextBox {
     width: 99% !important;
 }
-#tblTimeEntries tr td:nth-child(3) {
+#PageContent #tblTimeEntries tr td:nth-child(3) {
     width: 10% !important;
 }
 

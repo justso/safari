@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>turgd01</string>
+	<string>drt</string>
 	<key>CFBundleDisplayName</key>
 	<string>ECGape</string>
 	<key>CFBundleIdentifier</key>
@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -33,7 +33,7 @@
 		</array>
 		<key>Whitelist</key>
 		<array>
-			<string>http://aprimo.acxiom.net/</string>
+			<string>https://aprimo.acxiom.net/*</string>
 		</array>
 	</dict>
 	<key>Description</key>

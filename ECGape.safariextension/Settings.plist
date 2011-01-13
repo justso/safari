@@ -6,9 +6,9 @@
 		<key>DefaultValue</key>
 		<false/>
 		<key>Key</key>
-		<string>ucb</string>
+		<string>useless-check-box</string>
 		<key>Title</key>
-		<string>Useless check box</string>
+		<string>Increase complexity</string>
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
