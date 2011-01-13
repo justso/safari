@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>turgd01</string>
+	<key>CFBundleDisplayName</key>
+	<string>ECGape</string>
+	<key>CFBundleIdentifier</key>
+	<string>adp.drt.ecgape</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.1</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Blacklist</key>
+		<array>
+			<string>http://*/</string>
+		</array>
+		<key>Scripts</key>
+		<dict/>
+		<key>Stylesheets</key>
+		<array>
+			<string>inject.css</string>
+		</array>
+		<key>Whitelist</key>
+		<array>
+			<string>http://aprimo.acxiom.net/</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>I help Aprimo display stuff</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://10.89.61.69/ecgape/update.plist</string>
+	<key>Website</key>
+	<string>http://10.89.61.69/ecgape/index.html</string>
+</dict>
+</plist>
