@@ -4,11 +4,11 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
-		<false/>
+		<true/>
 		<key>Key</key>
 		<string>useless-check-box</string>
 		<key>Title</key>
-		<string>Increase complexity</string>
+		<string>Decrease complexity</string>
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>

@@ -3,42 +3,78 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>
-            Test ADP
+            ECGape Safari 5 extension
         </title>
         <style type="text/css">
-            body {
-                background-image: url("/w/skins/adp/headbg.png");
-                font: 12pt/18pt "Trebuchet MS";
-                margin: 0;
-                padding: 0 3em;
-            }
-            h1 {
-                background-color: rgba(111, 111, 111, 0.0);
-                text-shadow: rgba(111, 111, 111, 0.3) 3px 11px 4px;
-            }
-            h4:hover {
-                -webkit-border-radius: 6px;
-                background-color: rgba(255, 255, 255, 1);
-                text-shadow: rgba(0, 0, 0, 0.2) 3px 5px 2px;
-            }
-            a:hover {
-                color: red;
-            }
+            @import "index.css";
         </style>
     </head>
     <body>
-        <h6>
-            Art, Design and Print Test Server
-        </h6>
+        <h6>Art, Design and Print Test Server</h6>
         <h1>
-            ECGape extension for Safari 5 page
+            <em>ECGape</em> Safari 5 extension
         </h1>
         <h4>
-            Change log:
+            This extension injects some styles into the Aprimo pages (CSS, see ingredients below).
         </h4>
+        <p>
+            It is simple, client-side tweaking &mdash; just your browser, self-updating, and easily disabled.<br>
+            It was made to help us overcome some of the design defects that still exist, such as:
+        </p>
+        <ul>
+            <li>
+                Hiding the dangerous Close and Cancel buttons in the
+                <a href="https://aprimo.acxiom.net/Aprimo/Aprimo.aspx?PageID=12093&ID=418903&Mode=2&ActivityID=518498&Tab=Details">Project Workflow Management</a> pages.
+            </li>
+            <li>
+                Fixing the <a href="https://aprimo.acxiom.net/Aprimo/AprimoApp.aspx">logo</a> on the Main Window tab to the correct proportions and white background.
+            </li>
+            <li>
+                Moves the calendar day-picker icon to be near to the entry field.
+            </li>
+        </ul>
+        <h4>
+            <a class="download" href="ECGape.safariextz">Download</a>
+        </h4>
+        <hr>
+        <p>Complaints <em>or compliments</em> to: <a href="mailto:david.turgeon@wellsfargo.com">David Turgeon</a></p>
+        <h3>
+            Change log:
+        </h3>
         <ol>
             <li>v 1.0.1 -- 2011-01-12 first commit</li>
             <li>v 1.0.2 -- 2011-01-13 simplify js, tweak css, b/w list</li>
         </ol>
+        <h4 class="bubble">Active ingredients:</h4>
+        <pre><code>
+
+#PageContainer #NavColContainer {
+    background: white !important;
+}
+#PageContainer #NavColContainer .logo {
+    height: 72px !important;
+    margin-left: 63px !important;
+}
+
+#PageContext #Toolbar {
+    width: 66% !important;
+    text-align: right !important;
+}
+#PageContext #CloseToolbarItem, #CancelToolbarItem {
+    float: left !important;
+    visibility: hidden;
+}
+
+#PageContent #tblTimeEntries tr td:nth-child(1) {
+    width: 15% !important;
+}
+#PageContent #tblTimeEntries tr td:nth-child(2) .AprimoTextBox {
+    width: 99% !important;
+}
+#PageContent #tblTimeEntries tr td:nth-child(3) {
+    width: 10% !important;
+}
+
+</code></pre>
     </body>
 </html>

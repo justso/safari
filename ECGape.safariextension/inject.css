@@ -1,5 +1,8 @@
-.WindowFrame {
-    border-top: 3px solid #b02 !important;
+#PageContainer #NavColContainer:hover,
+#PageContext #Toolbar:hover,
+#PageContent #tblTimeEntries:hover {
+    /*border-bottom: 1px solid #b02 !important;
+    margin-bottom: -1px !important;*/
 }
 
 #PageContainer #NavColContainer {
@@ -13,8 +16,7 @@
 #PageContext #Toolbar {
     width: 66% !important;
     text-align: right !important;
-/*    border-radius: 16px 6px;
-*/}
+}
 #PageContext #CloseToolbarItem, #CancelToolbarItem {
     float: left !important;
     visibility: hidden;
