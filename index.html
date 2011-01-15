@@ -5,9 +5,8 @@
         <title>
             ECGape Safari 5 extension
         </title>
-        <style type="text/css">
-            @import "index.css";
-        </style>
+        <style type="text/css">@import "index.css";</style>
+        <script type="text/javascript" src="/lib/jquery/1.4.2.min.js"></script>
     </head>
     <body>
         <h6>Art, Design and Print Test Server</h6>
@@ -37,44 +36,22 @@
             <a class="download" href="ECGape.safariextz">Download</a>
         </h4>
         <hr>
-        <p>Complaints <em>or compliments</em> to: <a href="mailto:david.turgeon@wellsfargo.com">David Turgeon</a></p>
         <h3>
             Change log:
         </h3>
         <ol>
-            <li>v 1.0.1 -- 2011-01-12 first commit</li>
-            <li>v 1.0.2 -- 2011-01-13 simplify js, tweak css, b/w list</li>
+            <li>v.1.0.1 -- 2011-01-12 first commit</li>
+            <li>v.1.0.2 -- 2011-01-13 simplify js, tweak css, b/w list</li>
+            <li>v.1.0.3 -- 2011-01-14 remove useless complexity option</li>
         </ol>
-        <h4 class="bubble">Active ingredients:</h4>
-        <pre><code>
+        <h4 class="bubble">Show active ingredients:</h4>
+        <pre>
+<code id="blah">
 
-#PageContainer #NavColContainer {
-    background: white !important;
-}
-#PageContainer #NavColContainer .logo {
-    height: 72px !important;
-    margin-left: 63px !important;
-}
-
-#PageContext #Toolbar {
-    width: 66% !important;
-    text-align: right !important;
-}
-#PageContext #CloseToolbarItem, #CancelToolbarItem {
-    float: left !important;
-    visibility: hidden;
-}
-
-#PageContent #tblTimeEntries tr td:nth-child(1) {
-    width: 15% !important;
-}
-#PageContent #tblTimeEntries tr td:nth-child(2) .AprimoTextBox {
-    width: 99% !important;
-}
-#PageContent #tblTimeEntries tr td:nth-child(3) {
-    width: 10% !important;
-}
-
-</code></pre>
+</code>
+        </pre>
+        <hr>
+        <h5>Send complaints or <em>compliments</em> to: <a href="mailto:david.turgeon@wellsfargo.com">David Turgeon</a></h5>
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
