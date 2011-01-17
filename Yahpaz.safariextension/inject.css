@@ -1,10 +1,10 @@
 /*yahpaz*/
 
 body {
-    border: 1px solid red !important;
+    border: 1px solid #b02 !important;
 }
 
-#PageContainer td:nth-child(3) {
-    width: 10% !important;
+li:nth-child(3) {
+    color: green !important;
 }
 

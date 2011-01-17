@@ -20,6 +20,25 @@
 		<real>1048576</real>
 		<key>Global Page</key>
 		<string>global.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string></string>
+				<key>Identifier</key>
+				<string>Yahpaz</string>
+				<key>Image</key>
+				<string>wheel.png</string>
+				<key>Include By Default</key>
+				<false/>
+				<key>Label</key>
+				<string>Yahpaz</string>
+				<key>Palette Label</key>
+				<string>Yahpaz</string>
+				<key>Tool Tip</key>
+				<string>Yahpaz</string>
+			</dict>
+		</array>
 	</dict>
 	<key>Content</key>
 	<dict>
@@ -54,8 +73,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://adp/yahpaz/update.plist</string>
+	<string>http://adp/safari/yahpaz/update.plist</string>
 	<key>Website</key>
-	<string>http://adp/yahpaz/index.html</string>
+	<string>http://adp/safari/yahpaz/</string>
 </dict>
 </plist>
