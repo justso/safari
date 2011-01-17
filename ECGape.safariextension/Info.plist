@@ -21,10 +21,6 @@
 	</dict>
 	<key>Content</key>
 	<dict>
-		<key>Blacklist</key>
-		<array>
-			<string>http://*/</string>
-		</array>
 		<key>Scripts</key>
 		<dict/>
 		<key>Stylesheets</key>
@@ -51,8 +47,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://10.89.61.69/ecgape/update.plist</string>
+	<string>http://10.89.61.69/safari/ecgape/update.plist</string>
 	<key>Website</key>
-	<string>http://10.89.61.69/ecgape/index.html</string>
+	<string>http://10.89.61.69/safari/ecgape/</string>
 </dict>
 </plist>
