@@ -32,3 +32,10 @@
     width: 10% !important;
 }
 
+/*#TasksDataGrid_bodyDiv , #TasksDataGrid_bodyDiv  *{
+    border: 3px solid green !important;
+}
+*/
+#TasksDataGrid_bodyDiv, #TasksDataGrid_bodyScrollDiv {
+    height: 666px !important;
+}
