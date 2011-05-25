@@ -1,0 +1,9 @@
+/*barkode*/
+
+body {
+}
+
+#PageContainer td:nth-child(3) {
+    width: 10% !important;
+}
+

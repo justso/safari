@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><title>Barkode</title><script>
+/*
+... is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+...distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+*/
+
+var parseUrlEncoded = function(text) {
+    var data = {};
+
+    var pairs = text.split('&');
+    pairs.forEach(function(pair) {
+        pair = pair.split('=');
+        data[pair[0]] = decodeURIComponent(pair[1]).replace(/\+/g, ' ');
+    });
+
+    return data;
+}
+
+var canLoad = function(event) {
+    url = event.message;
+};
+
+var loadVideo = function(event) {};
+
+safari.application.addEventListener("message", function(event) {
+    if (event.name == 'canLoad') {
+        canLoad(event);
+    }
+},
+true);
+</script></head><body></body></html>
