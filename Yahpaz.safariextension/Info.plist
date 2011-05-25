@@ -56,6 +56,7 @@
 		<key>Whitelist</key>
 		<array>
 			<string>http://192.168.1.99/*</string>
+			<string>http://adp/*</string>
 		</array>
 	</dict>
 	<key>Description</key>
