@@ -1,0 +1,34 @@
+#PageContainer #NavColContainer:hover,
+#PageContext #Toolbar:hover,
+#PageContent #tblTimeEntries:hover {
+    /*border-bottom: 1px solid #b02 !important;
+    margin-bottom: -1px !important;*/
+}
+
+#PageContainer #NavColContainer {
+    background: white !important;
+}
+#PageContainer #NavColContainer .logo {
+    height: 72px !important;
+    margin-left: 63px !important;
+}
+
+#PageContext #Toolbar {
+    width: 66% !important;
+    text-align: right !important;
+}
+#PageContext #CloseToolbarItem, #CancelToolbarItem {
+    float: left !important;
+    visibility: hidden;
+}
+
+#PageContent #tblTimeEntries tr td:nth-child(1) {
+    width: 15% !important;
+}
+#PageContent #tblTimeEntries tr td:nth-child(2) .AprimoTextBox {
+    width: 99% !important;
+}
+#PageContent #tblTimeEntries tr td:nth-child(3) {
+    width: 10% !important;
+}
+
