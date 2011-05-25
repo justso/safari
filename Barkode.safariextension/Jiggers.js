@@ -1,3 +1,5 @@
+var win = safari.application.activeBrowserWindow;
+
 function Read_Later() {
     alert(this)
     var d = document,
@@ -26,12 +28,13 @@ function f2(){
 }
 
 function f3(){
+    console.log(safari.application.openBrowserWindow());
     console.log('this.parent',this.parent);
     return 0;
 }
 
 function f4(){
-    console.log();
+    console.log(img.src = safari.extension.baseURI + 'Images/myImage.png');
     return 0;
 }
 
@@ -40,12 +43,27 @@ function f5(){
     return 0;
 }
 
+
+// safari.application.activeBrowserWindow.console.log(safari.application.activeBrowserWindow);
+
+//safari.application.activeBrowserWindow.activeTab.console.log(safari.application.activeBrowserWindow);
+
+//console.log(safari.application.activeBrowserWindow.activeTab.browserWindow);
+//safari.application.activeBrowserWindow.activeTab.browserWindow.console.log(safari.application.activeBrowserWindow);
+//safari.extension.addContentStyleSheet('body { color:black !important; background:white !important}');
 function f6(){
+    hiMom();
+
+    //    safari.application.openBrowserWindow();
+    //    safari.application.activeBrowserWindow.onmouseover=function(){console.log(arguments)};
+    //return false;
     const bars = safari.extension.bars;
     const activeBrowserWindow = safari.application.activeBrowserWindow;
     for (var i = 0; i < bars.length; ++i) {
         var bar = bars[i];
-        console.log(bar.identifier)
+        safari.self.contentWindow.console.log(bar.identifier);
     }
     return 0;
 }
+
+
