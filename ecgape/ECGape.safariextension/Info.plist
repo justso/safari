@@ -4,6 +4,8 @@
 <dict>
 	<key>Author</key>
 	<string>drt</string>
+	<key>Builder Version</key>
+	<string>6534.52.7</string>
 	<key>CFBundleDisplayName</key>
 	<string>ECGape</string>
 	<key>CFBundleIdentifier</key>
@@ -11,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.4</string>
+	<string>1.0.5</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.4</string>
+	<string>1.0.5</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -29,7 +31,7 @@
 		</array>
 		<key>Whitelist</key>
 		<array>
-			<string>https://aprimo.acxiom.net/*</string>
+			<string>https://aprimo.wellsfargo.com/*</string>
 		</array>
 	</dict>
 	<key>Description</key>
@@ -47,7 +49,7 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://10.89.61.69/safari/ecgape/update.plist</string>
+	<string>http://10.89.102.81/safari/ecgape/update.plist</string>
 	<key>Website</key>
 	<string>http://10.89.61.69/safari/ecgape/</string>
 </dict>

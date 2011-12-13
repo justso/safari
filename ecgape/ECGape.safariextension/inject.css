@@ -4,7 +4,6 @@
     /*border-bottom: 1px solid #b02 !important;
     margin-bottom: -1px !important;*/
 }
-
 #PageContainer #NavColContainer {
     background: white !important;
 }
@@ -13,6 +12,7 @@
     margin-left: 63px !important;
 }
 
+/*
 #PageContext #Toolbar {
     width: 66% !important;
     text-align: right !important;
@@ -30,7 +30,7 @@
 }
 #PageContent #tblTimeEntries tr td:nth-child(3) {
     width: 10% !important;
-}
+}*/
 
 /*#TasksDataGrid_bodyDiv , #TasksDataGrid_bodyDiv  *{
     border: 3px solid green !important;
@@ -39,3 +39,4 @@
 #TasksDataGrid_bodyDiv, #TasksDataGrid_bodyScrollDiv {
     height: 666px !important;
 }
+
