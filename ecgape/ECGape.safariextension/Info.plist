@@ -24,7 +24,16 @@
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
-		<dict/>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>dom.parse.finish.js.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>dom.parse.begin.js.js</string>
+			</array>
+		</dict>
 		<key>Stylesheets</key>
 		<array>
 			<string>inject.css</string>
