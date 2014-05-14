@@ -1,18 +1,9 @@
-<!--
-Global HTML Page to control the extension logic.
--->
-<!DOCTYPE HTML>
-
-<script>
-// Set up the Listener
-safari.application.addEventListener("command", performCommand, false);
-
-// Function to perform when event is received
-function performCommand(event) {
-	// Make sure event comes from the button
-    if (event.command == "open-nettuts") {
-		var newTab = safari.application.activeBrowserWindow.openTab(); // Open a new tab
-		newTab.url = "http://net.tutsplus.com/"; // Set tab URL to nettuts
-    }
-}
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tuts</title>
+        <script src="app.load.js"></script>
+        <script src="app.main.js"></script>
+    </head>
+    <body></body>
+</html>
