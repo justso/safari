@@ -1,40 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html>
     <head>
         <title></title>
         <style type="text/css" title="currentStyle">
-    @import "/lib/jquery/dataTables/demo_page.css";
+            @import "/lib/jquery/dataTables/demo_page.css";
             @import "/lib/jquery/dataTables/demo_table_jui.css";
             @import "/lib/jquery/ui/1.7.3/css/smoothness/jquery-ui-1.7.3.custom.css";
             td { white-space: nowrap; font: 80%/120% normal "Arial Narrow";}
         </style>
-        <script type="text/javascript" src="/lib/js/jquery.js">
-</script>
-        <script type="text/javascript" src="/lib/jquery/dataTables/jquery.dataTables.js">
-</script>
-        <script type="text/javascript" charset="utf-8">
-        function init(tbl) {
-            $(event.target).remove();
-            tbl = $(tbl);
-            fixTable(tbl);
-            initTable(tbl);
-        }
-        function fixTable(tbl) {
-            // turn first TR into a header row
-            var fr = $('tr:first',tbl);
-            fr.insertBefore(fr.parent());
-            $('td',fr).each(function(){
-                $(this).before($('<th>')).remove();
-            });
-            fr.append($('<th>')).wrap('<thead>');
-        };
-        function initTable(tbl) {
-            return tbl.dataTable({
-                bJQueryUI: true,
-                sPaginationType: "full_numbers",
-                bPaginate: false
-            });
-        }
+        <script src="/lib/js/jquery.js"></script>
+        <script src="/lib/jquery/dataTables/jquery.dataTables.js"></script>
+        <script>
+            function init(tbl) {
+                $(event.target).remove();
+                tbl = $(tbl);
+                fixTable(tbl);
+                initTable(tbl);
+            }
+            function fixTable(tbl) {
+                // turn first TR into a header row
+                var fr = $('tr:first',tbl);
+                fr.insertBefore(fr.parent());
+                $('td',fr).each(function(){
+                    $(this).before($('<th>')).remove();
+                });
+                fr.append($('<th>')).wrap('<thead>');
+            };
+            function initTable(tbl) {
+                return tbl.dataTable({
+                    bJQueryUI: true,
+                    sPaginationType: "full_numbers",
+                    bPaginate: false
+                });
+            }
         </script>
     </head>
     <body>
@@ -58,7 +56,7 @@
         //1//Aprimo.getControl(&quot;TasksDataGrid&quot;).
         //nowrap//nowrap="true"
         //alt//oncontextmenu
-                            -->
+                        -->
                         <td onclick="//1//doOnCellClick(0, 0, event)" id="TasksDataGrid_data_0_0" class="dg_ListCell">
                             <a href="#" onclick="//1//doOnActionButtonPress(0,0,0, event);return false;">Time&nbsp;Tracker</a>
                         </td>

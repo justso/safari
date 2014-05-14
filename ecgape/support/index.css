@@ -1,14 +1,15 @@
 body {
     background-color: #cebabe;
-    font: 1.2em/1.8em "Archer","Georgia";
-    margin: 2em auto;
-    width: 80%;
-    padding: 0 3em;
     background-image: -webkit-gradient(radial,
         50% 250, 1000,
         50% 500, 100,
         from(rgba(22, 22, 22, 0.3)),
         to(rgba(222, 222, 222, 0)));
+    background-size: 100% 120%;
+    font: 1.2em/1.8em "Archer","Georgia";
+    margin: 2em auto;
+    padding: 0 3em;
+    width: 80%;
 }
 /*
 -webkit-gradient(<linear or radial>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*)
