@@ -1,12 +1,12 @@
 /*jslint es5:true, white:false */
-/*globals DRT,  */
+/*globals DRT, W */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-if (DRT.debug) {
-    DRT.C.debug('main', DRT.D.title);
-}
+DRT.log('main');
 
-DRT.S.application.addEventListener('message', function (event) {
-    if (event.name == 'say') {
-        DRT.C.debug('message say', event, JSON.stringify(event.message));
+DRT.app.addEventListener('message', function (event, etc) {
+    var data = event.message;
+
+    if (event.name === 'say') {
+        DRT.C.debug(0, data.context + ' says', JSON.stringify(data.object), event);
     }
 }, true);

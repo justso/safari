@@ -1,31 +1,33 @@
 /*jslint es5:true, white:false */
 /*globals window,  */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-var DRT = ({
-    W: window,
-    D: window.document,
-    C: window.console,
-    S: window.safari,
-    L: window.location,
-    app: window.safari.application,
-    s: window.window.location.search,
-    tab: window.safari.self.tab,
+var W = window,
+    DRT = ({
+    D: W.document,
+    C: W.console,
+    S: W.safari,
+    L: W.location,
+    app: W.safari.application,
+    s: W.window.location.search,
+    tab: W.safari.self.tab,
     context: null,
     debug: null,
+    title: null,
     conf: function (context, debug) {
         this.context = context;
         this.debug = debug;
+        this.title = this.D.title;
 
         this.conf = function inited() {
             this.C.error('already inited');
         };
-        if (this.debug) {
-            this.C.warn('DRT', this, context, this.L.href);
-        }
         return this;
     },
-}.conf('EXT', 1));
+    log: function (x) {
+        this.title = this.D.title;
 
-if (DRT.debug) {
-    DRT.C.debug('load', DRT.D.title);
-}
+        if (this.debug) {
+            this.C.warn(this.context + ' ' + x, this, this.L.href, this.u);
+        }
+    },
+}.conf('[EXT]', 1));

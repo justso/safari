@@ -1,21 +1,36 @@
 /*jslint es5:true, white:false */
-/*globals DRT,  */
+/*globals DRT, W */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-DRT.S.self.tab.dispatchMessage('say', {
-    parse: DRT.context + ':finish',
+DRT.log('finish');
+
+DRT.say({
+    drt: function () {
+        return DRT;
+    },
+    str: 'finish parse',
 });
 
-function DR_check() {
-    var s0, s1;
-    s0 = DRT.s;
+function minutes(n) {
+    n = 1000 * 60 * n;
 
-    if (s0) {
-        s1 = DRT.W.top.WinIFrame1.Content1.DRT.s;
+    DRT.C.debug('RefreshPage in', n);
 
-        if (s0 === s1) {
-            DRT.C.debug(s0, DRT.W);
-        }
-    }
+    return n;
 }
 
-DRT.W.setInterval(DR_check, 3333);
+W.setTimeout(function () {
+    var s, w;
+
+    if (DRT.s && W.top.WinIFrame1) {
+        w = W.top.WinIFrame1.Content1;
+        s = w.location.search;
+
+        if (DRT.s === s) {
+            DRT.C.debug('gotcha!', w);
+            W.setInterval(function () {
+                DRT.say('gotcha!');
+                w.location.reload();
+            }, minutes(30));
+        }
+    }
+}, 999);
