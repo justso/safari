@@ -20,21 +20,75 @@ function minutes(n) {
     return n;
 }
 
-W.setTimeout(function () {
-    var s, w;
+function getJob1() {
+    var w = false;
 
     if (DRT.s && W.top.WinIFrame1) {
         w = W.top.WinIFrame1.Content1;
-        s = w.location.search;
-
-        if (DRT.s === s) {
-            C.debug('gotcha!', w);
-            W.setInterval(function () {
-                DRT.say('gotcha!');
-                w.location.reload();
-            }, minutes(30));
-        }
     }
+    return w;
+}
+
+function makeInterval(ctx, fn, n) {
+    var t;
+
+    if (!ctx || !ctx.setTimeout) {
+        throw new Error('First arg s/b a window context');
+    }
+
+    function _start() {
+        ctx.setTimeout(fn, 1000);
+        t = ctx.setInterval(fn, n);
+        return this.stop;
+    }
+
+    function _stop() {
+        ctx.clearInterval(t);
+        t = 0;
+        return this.start;
+    }
+
+    function _toggle() {
+        return t ? this.start() : this.stop();
+    }
+
+    return {
+        start: _start,
+        stop: _stop,
+        toggle: _toggle,
+    };
+}
+
+W.setTimeout(function () {
+    var countdown, m, n, t, tick, w;
+
+    w = getJob1();
+    m = 3;
+    n = 0;
+    t = String(Date.now()).slice(-3);
+
+    countdown = function () {
+        n = n % m;
+        this.document.title = (m - n++) + ':' + t;
+    };
+
+    if (w) {
+        C.debug('gotcha!', w);
+
+        tick = makeInterval(W.top, countdown, minutes(1));
+        tick.start();
+
+        W.setInterval(function () {
+            DRT.domsay('gotcha!');
+
+            tick.stop();
+
+            w.location.reload();
+        }, minutes(m));
+
+        C.debug('RefreshPage in', minutes(m));
+    }
+
 }, 999);
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
