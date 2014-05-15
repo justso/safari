@@ -8,6 +8,7 @@ var W = window,
     S: W.safari,
     L: W.location,
     app: W.safari.application,
+    h: W.window.location.href,
     s: W.window.location.search,
     tab: W.safari.self.tab,
     context: null,
@@ -27,7 +28,7 @@ var W = window,
         this.title = this.D.title;
 
         if (this.debug) {
-            C.warn(0, (this.context + ' ' + msg), this, this.L.href);
+            C.warn(0, (this.context + ' ' + msg), this, (W === W.top ? 'top' : this.h));
         }
     },
 }.conf('[DOM]', 1));

@@ -4,9 +4,6 @@
 DRT.log('finish');
 
 DRT.domsay({
-    drt: function () {
-        return DRT;
-    },
     str: 'finish parse',
 });
 
@@ -14,9 +11,6 @@ DRT.domsay({
 
 function minutes(n) {
     n = 1000 * 60 * n;
-
-    C.debug('RefreshPage in', n);
-
     return n;
 }
 
@@ -65,7 +59,7 @@ W.setTimeout(function () {
     w = getJob1();
     m = 3;
     n = 0;
-    t = String(Date.now()).slice(-3);
+    t = new Date().toLocaleTimeString();
 
     countdown = function () {
         n = n % m;
