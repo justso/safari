@@ -2,9 +2,9 @@
 /*globals window,  */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 var W = window,
-DRT = ({
+    C = W.console,
+    DRT = ({
     D: W.document,
-    C: W.console,
     S: W.safari,
     L: W.location,
     app: W.safari.application,
@@ -19,24 +19,28 @@ DRT = ({
         this.title = this.D.title;
 
         this.conf = function inited() {
-            this.C.error('already inited');
+            C.error('already inited');
         };
         return this;
     },
-    log: function (x) {
+    log: function (msg) {
         this.title = this.D.title;
 
         if (this.debug) {
-            this.C.warn(1, this.context + ' ' + x, this, this.L.href);
+            C.warn(0, (this.context + ' ' + msg), this, this.L.href);
         }
     },
 }.conf('[DOM]', 1));
 
-DRT.say = function (o) {
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+DRT.domsay = function (o) {
     DRT.tab.dispatchMessage('say', {
-        context: 'DOC',
+        context: DRT.context,
         object: o || {
             str: 'dispatchMessage',
         },
     });
 };
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

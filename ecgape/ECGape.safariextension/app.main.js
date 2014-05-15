@@ -1,12 +1,20 @@
 /*jslint es5:true, white:false */
-/*globals DRT, W */
+/*globals DRT, W, C */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 DRT.log('main');
 
-DRT.app.addEventListener('message', function (event, etc) {
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+DRT.app.addEventListener('message', function (event) {
     var data = event.message;
 
     if (event.name === 'say') {
-        DRT.C.debug(0, data.context + ' says', JSON.stringify(data.object), event);
+        C.debug(0,
+            (data.context + ' says'),
+            event,
+            JSON.stringify(data.object)
+            );
     }
 }, true);
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

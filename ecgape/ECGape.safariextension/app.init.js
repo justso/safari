@@ -2,9 +2,9 @@
 /*globals window,  */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 var W = window,
+    C = W.console,
     DRT = ({
     D: W.document,
-    C: W.console,
     S: W.safari,
     L: W.location,
     app: W.safari.application,
@@ -19,15 +19,17 @@ var W = window,
         this.title = this.D.title;
 
         this.conf = function inited() {
-            this.C.error('already inited');
+            C.error('already inited');
         };
         return this;
     },
-    log: function (x) {
+    log: function (msg) {
         this.title = this.D.title;
 
         if (this.debug) {
-            this.C.warn(this.context + ' ' + x, this, this.L.href, this.u);
+            C.warn(0, (this.context + ' ' + msg), this, this.L.href);
         }
     },
-}.conf('[EXT]', 1));
+}.conf('[APP]', 1));
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

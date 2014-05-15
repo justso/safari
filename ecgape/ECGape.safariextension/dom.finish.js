@@ -1,19 +1,21 @@
 /*jslint es5:true, white:false */
-/*globals DRT, W */
+/*globals DRT, W, C */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 DRT.log('finish');
 
-DRT.say({
+DRT.domsay({
     drt: function () {
         return DRT;
     },
     str: 'finish parse',
 });
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 function minutes(n) {
     n = 1000 * 60 * n;
 
-    DRT.C.debug('RefreshPage in', n);
+    C.debug('RefreshPage in', n);
 
     return n;
 }
@@ -26,7 +28,7 @@ W.setTimeout(function () {
         s = w.location.search;
 
         if (DRT.s === s) {
-            DRT.C.debug('gotcha!', w);
+            C.debug('gotcha!', w);
             W.setInterval(function () {
                 DRT.say('gotcha!');
                 w.location.reload();
@@ -34,3 +36,5 @@ W.setTimeout(function () {
         }
     }
 }, 999);
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
